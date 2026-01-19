@@ -1,0 +1,541 @@
+/* =====================================================
+   ZIEBA BYGG - Responsive Stylesheet
+   Mobile-first responsive breakpoints
+   ===================================================== */
+
+/* Large Desktop (1280px+) */
+@media (min-width: 1280px) {
+    .container {
+        padding: 0 var(--space-xl);
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Desktop (1024px - 1279px) */
+@media (min-width: 1024px) {
+    .header__cta {
+        display: block;
+    }
+}
+
+/* Tablet and below (max 1023px) */
+@media (max-width: 1023px) {
+    :root {
+        --fs-h1: 2.25rem;
+        --fs-h2: 1.75rem;
+        --fs-h3: 1.375rem;
+    }
+
+    /* Header */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header__nav {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: var(--space-xl);
+        transform: translateX(100%);
+        transition: transform var(--transition-normal);
+        overflow-y: auto;
+    }
+
+    .header__nav.active {
+        transform: translateX(0);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav__link {
+        display: block;
+        padding: var(--space-md);
+        font-size: var(--fs-body);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav__link::after {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + var(--space-3xl));
+        padding-bottom: var(--space-3xl);
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+
+    /* Introduction */
+    .intro__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .intro__image {
+        order: -1;
+    }
+
+    .intro__image img {
+        height: 300px;
+    }
+
+    /* Services */
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why Us */
+    .why-us__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Service Area */
+    .service-area__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* Project Types */
+    .project-types__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Service Detail */
+    .service-detail__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .service-detail:nth-child(even) .service-detail__grid {
+        direction: ltr;
+    }
+
+    .service-detail__image {
+        order: -1;
+    }
+
+    /* Pricing */
+    .pricing__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About */
+    .about-intro__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about-intro__stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-stat {
+        padding: var(--space-md);
+    }
+
+    .about-stat:not(:last-child) {
+        border-bottom: none;
+        border-right: 1px solid var(--color-border);
+    }
+
+    /* Values */
+    .values__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Service Area Detail */
+    .service-area-detail__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery */
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact */
+    .contact__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .contact__info {
+        order: 2;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2xl);
+    }
+
+    .footer__brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile (max 767px) */
+@media (max-width: 767px) {
+    :root {
+        --fs-h1: 2rem;
+        --fs-h2: 1.5rem;
+        --fs-h3: 1.25rem;
+        --space-4xl: 4rem;
+        --space-3xl: 3rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    /* Header */
+    .header {
+        height: 70px;
+    }
+
+    .header__logo-text {
+        font-size: 1.25rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: calc(70px + var(--space-2xl));
+        padding-bottom: var(--space-2xl);
+    }
+
+    .hero__badge {
+        font-size: var(--fs-xs);
+    }
+
+    .hero__title {
+        font-size: 1.875rem;
+    }
+
+    .hero__subtitle {
+        font-size: var(--fs-body);
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+    }
+
+    /* Quick Contact */
+    .quick-contact__inner {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    /* Introduction */
+    .intro__features {
+        grid-template-columns: 1fr;
+    }
+
+    /* Services */
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: var(--space-lg);
+    }
+
+    /* Why Us */
+    .why-us__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us__item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Service Area */
+    .service-area__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Project Types */
+    .project-types__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        aspect-ratio: 16/9;
+    }
+
+    /* CTA */
+    .cta__buttons {
+        flex-direction: column;
+    }
+
+    .cta__buttons .btn {
+        width: 100%;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding-top: calc(70px + var(--space-3xl));
+        padding-bottom: var(--space-2xl);
+    }
+
+    .page-header p {
+        font-size: var(--fs-body);
+    }
+
+    /* Service Detail */
+    .service-detail__content h2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+
+    .service-detail__image img {
+        height: 250px;
+    }
+
+    /* Pricing */
+    .pricing__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* About Stats */
+    .about-intro__stats {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stat:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Values */
+    .values__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Area Groups */
+    .area-group ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery */
+    .gallery__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery__filter {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: var(--space-sm);
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery__filter-btn {
+        flex-shrink: 0;
+    }
+
+    /* Contact Form */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__form-container {
+        padding: var(--space-lg);
+    }
+
+    .form-submit {
+        flex-direction: column;
+    }
+
+    .form-submit .btn {
+        width: 100%;
+    }
+
+    /* Contact Map */
+    .contact__map-container {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__legal {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Small Mobile (max 374px) */
+@media (max-width: 374px) {
+    :root {
+        --fs-h1: 1.75rem;
+        --fs-h2: 1.375rem;
+        --fs-body: 0.9375rem;
+    }
+
+    .btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: var(--fs-small);
+    }
+
+    .btn--large {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--fs-body);
+    }
+}
+
+/* Hover states - only on devices that support hover */
+@media (hover: hover) {
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .service-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .value-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .project-card:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery__item:hover img {
+        transform: scale(1.05);
+    }
+}
+
+/* Touch devices - remove hover transforms */
+@media (hover: none) {
+    .btn:active {
+        transform: translateY(-1px);
+    }
+
+    .service-card:active,
+    .value-card:active {
+        transform: translateY(-2px);
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .hero__scroll {
+        animation: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .hero__scroll,
+    .cta,
+    .footer,
+    .btn,
+    .menu-toggle {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    h1, h2, h3 {
+        color: #000;
+        page-break-after: avoid;
+    }
+
+    .section {
+        padding: 1rem 0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --color-text-light: #495057;
+        --color-text-muted: #6c757d;
+        --color-border: #adb5bd;
+    }
+
+    .btn--primary {
+        border: 2px solid var(--color-primary-dark);
+    }
+
+    .btn--secondary {
+        border-width: 3px;
+    }
+}
+
+/* Dark mode preference (future enhancement) */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode styles would go here */
+    /* Currently not implemented - keeping light theme */
+}
